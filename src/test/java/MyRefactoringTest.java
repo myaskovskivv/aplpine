@@ -10,7 +10,7 @@ import pages.TravelPage;
 import static org.junit.Assert.assertEquals;
 
 public class MyRefactoringTest extends BaseTest {
-//git
+//git // git
     @Test
     public void newInsTest() {
         driver.get(baseUrl);
