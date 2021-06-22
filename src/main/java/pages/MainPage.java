@@ -22,8 +22,8 @@ public class MainPage {
         PageFactory.initElements(driver, this);
        // закрываем всплывающее окно предупреждение про куки
        // Wait<WebDriver> wait = new WebDriverWait(driver, 5, 1000);
-       //  WebElement closeBtn = driver.findElement(By.xpath("//*[text()='Закрыть']"));
-       //  wait.until(ExpectedConditions.visibilityOf(closeBtn)).click();
+        // WebElement closeBtn = driver.findElement(By.xpath("//*[text()='Закрыть']"));
+        // wait.until(ExpectedConditions.visibilityOf(closeBtn)).click();
     }
 
     public void selectMainMenu(String menuItem) {

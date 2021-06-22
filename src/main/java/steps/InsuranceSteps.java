@@ -6,7 +6,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class InsuranceSteps extends BaseSteps {
 
-    @Step("кнопка оформить на странице Страхование путешестивенников {0}")
+    //@Step("кнопка оформить на странице Страхование путешестивенников {0}")
     public void stepSendBtnIns(){
         new InsurancePage(driver).sendButton.click();
     }
