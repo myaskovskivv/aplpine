@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import steps.BaseSteps;
 
 public class SendAppPage {
     WebDriver driver;
@@ -51,11 +52,11 @@ public class SendAppPage {
     @FindBy(xpath = "//*[contains(@class,'btn-primary')]")
     public WebElement sendButton;
 
-    public SendAppPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+    public SendAppPage() {
+        PageFactory.initElements(BaseSteps.getDriver(), this);
         Wait<WebDriver> wait = new WebDriverWait(driver, 5, 1000);
         wait.until(ExpectedConditions.visibilityOf(title));
-        this.driver = driver;
+        this.driver = BaseSteps.getDriver();
     }
 
     public void fillField(String fieldName, String value){

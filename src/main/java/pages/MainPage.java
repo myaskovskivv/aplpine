@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import steps.BaseSteps;
 
 public class MainPage {
 
@@ -18,8 +19,8 @@ public class MainPage {
     @FindBy(xpath = "(//DIV[@class='kitt-top-menu__dropdown kitt-top-menu__dropdown_icons'])[8]")
     WebElement subMenu;
 
-    public MainPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+    public MainPage() {
+        PageFactory.initElements(BaseSteps.getDriver(), this);
        // закрываем всплывающее окно предупреждение про куки
        // Wait<WebDriver> wait = new WebDriverWait(driver, 5, 1000);
         // WebElement closeBtn = driver.findElement(By.xpath("//*[text()='Закрыть']"));

@@ -6,10 +6,11 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.HashMap;
 
-public class SendAppSteps extends BaseSteps{
+public class SendAppSteps //extends BaseSteps
+{
     //@Step("заполнить поля {0} заявки значением {1} ")
     public void stepFillField(String field, String value) {
-      new SendAppPage(driver).fillField(field, value);
+      new SendAppPage().fillField(field, value);
     }
 
     //@Step("заполняются поля:")

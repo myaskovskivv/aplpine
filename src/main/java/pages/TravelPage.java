@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import steps.BaseSteps;
 
 public class TravelPage {
 
@@ -15,9 +16,9 @@ public class TravelPage {
     @FindBy(xpath = "//*[contains(text(),'Оформить онлайн')]")
     public WebElement sendButton;
 
-    public TravelPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        Wait<WebDriver> wait = new WebDriverWait(driver, 5, 1000);
+    public TravelPage() {
+        PageFactory.initElements(BaseSteps.getDriver(), this);
+        Wait<WebDriver> wait = new WebDriverWait(BaseSteps.getDriver(), 5, 1000);
         wait.until(ExpectedConditions.visibilityOf(sendButton));
     }
 

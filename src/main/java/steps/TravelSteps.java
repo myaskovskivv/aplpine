@@ -4,10 +4,11 @@ package steps;
 import pages.TravelPage;
 import ru.yandex.qatools.allure.annotations.Step;
 
-public class TravelSteps extends BaseSteps{
+public class TravelSteps //extends BaseSteps
+{
 
     //@Step("нажать кнопку отправить заявку {0}")
     public void stepSendBtn(){
-        new TravelPage(driver).sendButton.click();
+        new TravelPage().sendButton.click();
     }
 }
